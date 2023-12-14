@@ -1,9 +1,20 @@
-
 // 1 es piedra, 2 es papel, 3 es tijera
-let jugador = 0
+let jugador 
+let num
 let pc = 2
-jugador = prompt("Elige: 1 para piedra, 2 para papel, 3 para tijera")
 
+
+function jug(pers){
+
+    pers = prompt("Elige: 1 para piedra, 2 para papel, 3 para tijera, 4  PARA SALIR")
+    return pers;
+}
+
+jugador=jug(num)
+
+//CICLO
+while(jugador==1 || jugador==2 || jugador==3)
+{
 
 if(jugador == 1) {
     alert("Elegiste piedra")
@@ -24,13 +35,32 @@ if(pc == 1) {
 // COMBATE
 
 if(pc == jugador){
-    alert("EMPATE")
+    alert("EMPATE") 
+    
+    break
+    
 } else if(jugador == 1 && pc == 3) {
     alert("GANASTE")
+    
+    break
+
 } else if(jugador == 2 && pc == 1) {
     alert("GANASTE")
+    
+    break
+
 } else if(jugador == 3 && pc == 2) {
     alert("GANASTE")
+    
+    break
+
 } else {
     alert("PERDISTE")
+    
+    break
+
 }
+
+}
+
+alert("Fin")
